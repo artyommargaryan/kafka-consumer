@@ -50,7 +50,7 @@ public class GameEventService {
     }
 
     private void validateStringField(String fieldValue, String fieldName, StringBuilder errorMessage) {
-        if (StringUtils.hasText(fieldValue)) {
+        if (!StringUtils.hasText(fieldValue)) {
             errorMessage.append(String.format("%s is null or blank; ", fieldName));
         }
     }
